@@ -2,7 +2,7 @@
 
 The visual and editorial rulebook for [@thirdspace.her](https://instagram.com/thirdspace.her). A working toolkit for the multi-dimensional mother in Southeast Asia.
 
-**Live site:** _(GitHub Pages URL appears here after first push)_
+**Live site:** https://psanan23.github.io/thirdspace-visual-identity/
 
 ---
 
