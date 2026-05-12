@@ -2,13 +2,21 @@
    Shared stylesheet. Edit here, change everywhere. */
 
 :root {
-  --bone: #F2EDE3;
-  --ink: #1A1816;
-  --tobacco: #6B4F3A;
-  --honey: #C9A06B;
-  --blush: #E8C5B5;
-  --linen: #E8E1D4;
-  --stone: #B0A89C;
+  /* Direction A · Goop Warmth — locked 2026-05-12 */
+  --cream: #F4ECDF;       /* background, default surface */
+  --ink: #1A1816;         /* text, rare backgrounds */
+  --terracotta: #C8623B;  /* feature — covers, callouts, sigs */
+  --plum: #5D3B3F;        /* second-tier emphasis, founder rules, dark posts */
+  --mustard: #D6A538;     /* rare accent, featured stories — 1 in 9 max */
+  --tobacco: #6B4F3A;     /* utility brown — attribution, small caps */
+  --linen: #EDE3D0;       /* slight shift from cream, Editor's note backgrounds */
+  --stone: #B0A89C;       /* thin lines, dividers */
+
+  /* Legacy aliases — keep so existing references don't break.
+     Will be removed in v3 once every page is verified. */
+  --bone: var(--cream);
+  --honey: var(--terracotta);
+  --blush: var(--mustard);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
