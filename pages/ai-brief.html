@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brief an AI — Third Space Visual Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .prompt-box {
+    background: var(--ink);
+    color: var(--bone);
+    padding: 28px 32px;
+    font-family: 'Karla', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    border-left: 3px solid var(--honey);
+    margin: 16px 0 28px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .prompt-box strong { color: var(--honey); font-weight: 500; }
+  .copy-hint {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--tobacco);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-logo"><a href="../index.html">THIRD&nbsp;SPACE — visual identity</a></div>
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="brand.html">Brand</a>
+      <a href="color.html">Color</a>
+      <a href="type.html">Type</a>
+      <a href="logo.html">Logo</a>
+      <a href="posts.html">Posts</a>
+      <a href="photography.html">Photography</a>
+      <a href="voice.html">Voice</a>
+      <a href="ai-brief.html" class="active">Brief an AI</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">08 — Briefing AI tools</div>
+    <h1>Copy. Paste. On-brand output.</h1>
+    <p class="lede">Ready-to-use prompts for Claude, ChatGPT, and Midjourney. Each one references this kit so the model has everything it needs in one block.</p>
+  </section>
+
+  <section>
+    <span class="tag">The universal brief</span>
+    <h2>Paste this above any prompt.</h2>
+    <p class="section-intro">Drop this paragraph in front of any creative task — caption, headline, image, post draft. It loads the brand into the model's context in ~150 words.</p>
+
+    <div class="copy-hint">Paste this</div>
+    <div class="prompt-box">You are writing for <strong>Third Space</strong>, an Instagram-first editorial platform for the multi-dimensional mother in Southeast Asia — ambitious women navigating career, identity, and motherhood at once. Audience: founders, creatives, professionals in their 30s–40s in Singapore and SEA.
+
+Voice: <strong>recognised, specific, honest</strong>. We name what she already feels but hasn't said. Real details over abstraction. No tidy resolution.
+
+Never use: motivational language, "mama," "this season," "we sat down with," exclamation marks, girlboss vocabulary, or wellness-speak.
+
+Visual system: warm-quiet palette (Bone #F2EDE3, Ink #1A1816, Tobacco #6B4F3A, Honey #C9A06B, Blush #E8C5B5). Two fonts only — Fraunces (big) and Karla (small). Five post types: Cover, Pull quote, Portrait, Atmospheric, Editor's note.
+
+Reference brands we pull from: Luminary Mothers (editorial), Aesop (palette restraint), Goop (typographic clarity). We do not pull from Gen-Z entertainment brands or wellness platforms.</div>
+  </section>
+
+  <section>
+    <span class="tag">For Claude / ChatGPT — writing</span>
+    <h2>Caption + headline prompts.</h2>
+
+    <h3 style="margin-top: 32px;">Pull quote selection</h3>
+    <div class="copy-hint">Prompt</div>
+    <div class="prompt-box">[Paste universal brief above]
+
+Here is a transcript from an interview with [name, age, one identifying detail]:
+
+[paste transcript]
+
+Pull <strong>5 candidate sentences</strong> for a Pull-quote post. Rules:
+— 12 to 22 words each
+— Word-for-word from her, no paraphrasing
+— Each must stand alone with no context
+— Each must do at least one of: normalise the mess, expand possibility, satisfy curiosity
+— No motivational tone, no resolution
+
+Return them as a numbered list, with a one-line note on which content pillar each belongs to (Identity &amp; Becoming / Work &amp; Ambition / Relationships &amp; Systems / The Unsaid).</div>
+
+    <h3>Cover headline generation</h3>
+    <div class="copy-hint">Prompt</div>
+    <div class="prompt-box">[Paste universal brief above]
+
+Subject: [name, age, defining frame in one sentence]
+Pillar: [01 Identity / 02 Work / 03 Relationships / 04 Unsaid]
+
+Write <strong>4 candidate Cover headlines</strong>. Rules:
+— Sentence form, 8 to 14 words
+— Fraunces Light will set it big, so the rhythm matters
+— No quotation marks — these are hooks, not quotes
+— Specific over abstract. Use her real choice, her real number, her real word
+— Must answer: <em>what does it actually look like when a woman like her holds all of this?</em>
+
+Return as a numbered list.</div>
+
+    <h3>Caption for any post</h3>
+    <div class="copy-hint">Prompt</div>
+    <div class="prompt-box">[Paste universal brief above]
+
+Post type: [Cover / Pull quote / Portrait / Atmospheric / Editor's note]
+Subject + frame: [name, age, one-line summary of what the post is about]
+
+Write the caption per the rules in voice.html:
+— Cover: 2–3 sentences, name + identifying detail + frame
+— Pull quote: 1 sentence of context, or none
+— Portrait: first name + location only
+— Atmospheric: a single phrase in italic Fraunces, or nothing
+— Editor's note: 30–60 words, signed "— Third Space"
+
+Never editorialise. Don't say "we sat down with." Don't perform empathy.</div>
+  </section>
+
+  <section>
+    <span class="tag">For Midjourney / image tools</span>
+    <h2>Atmospheric image prompts.</h2>
+    <p class="section-intro">These are for the Atmospheric post slot only. Portraits are never AI-generated.</p>
+
+    <h3 style="margin-top: 24px;">Base atmospheric prompt</h3>
+    <div class="copy-hint">Prompt</div>
+    <div class="prompt-box">[subject — e.g. a still life of a half-empty espresso cup on a marble counter, a worn notebook beside it, morning light from a window]
+
+Style: editorial, warm muted tones, palette of cream, ink, tobacco brown, soft gold. Shot on medium format, natural window light, shallow depth of field. The mood of Aesop and Luminary Mothers. Not glossy, not heavily produced. Empty space in the frame. No people. No text.
+
+Negative: bright colours, neon, saturation, HDR, AI-obvious skin, cluttered composition, lifestyle stock cliché.
+
+Aspect ratio: 1:1 --ar 1:1 --style raw --v 6</div>
+
+    <h3>What it should NOT look like</h3>
+    <div class="copy-hint">Prompt</div>
+    <div class="prompt-box">Reject the output if it has:
+— Bright or saturated colours
+— Faces or full figures (Atmospheric posts are object/light-led)
+— Obvious "stock photo" composition (centered subject, all in focus)
+— Text overlays, watermarks, brand marks
+— Glossy magazine retouching
+— Tropical or beach imagery (Third Space is urban-domestic, not lifestyle-travel)
+— Anything that reads as wellness, yoga, or self-care content</div>
+  </section>
+
+  <section>
+    <span class="tag">For Canva / Figma</span>
+    <h2>Briefing a designer or template builder.</h2>
+    <p class="section-intro">If you're handing off to a designer or asking an AI to draft a Canva template, send this.</p>
+
+    <div class="prompt-box">Build a <strong>1080×1080 px Instagram post template</strong> for Third Space.
+
+Type: [Cover / Pull quote / Editor's note]
+
+Specifications from this toolkit:
+— Background: Bone (#F2EDE3) by default. Linen (#E8E1D4) only for Editor's note.
+— Fonts: Fraunces (titles, quotes, signoff) + Inter (tags, attribution). No third font.
+— Cover layout: small pillar tag in Tobacco at top (Karla Medium, 9–10px equivalent, 0.32em letter-spacing, all caps). Large headline middle (Fraunces Light, 32–40px). First name + identifier at bottom in italic Fraunces Tobacco.
+— Pull quote layout: italic Fraunces centered, 12–22 words. Attribution beneath in Inter Tobacco.
+— Editor's note layout: Linen background. 30–60 words in Fraunces Medium. Signoff in italic Fraunces Tobacco: "— Third Space".
+
+Maximum two type sizes per post. Empty space is required — do not fill the canvas.</div>
+  </section>
+
+  <section style="border-bottom: none;">
+    <span class="tag">Test the output</span>
+    <h2>Three-question gut check.</h2>
+    <p class="section-intro">After any AI-generated draft (caption, image, post), run it through these three questions before publishing. If any answer is "no" — redo it, don't ship it.</p>
+
+    <ol style="list-style: none; padding-left: 0; max-width: 64ch;">
+      <li style="padding: 22px 0; border-top: 1px solid var(--stone); font-family: 'Fraunces'; font-size: 22px; line-height: 1.4;">
+        <span style="font-family: 'Karla'; font-size: 11px; letter-spacing: 0.2em; color: var(--tobacco); display: block; margin-bottom: 4px;">01</span>
+        Would the woman in the audience paragraph stop scrolling for this?
+      </li>
+      <li style="padding: 22px 0; border-top: 1px solid var(--stone); font-family: 'Fraunces'; font-size: 22px; line-height: 1.4;">
+        <span style="font-family: 'Karla'; font-size: 11px; letter-spacing: 0.2em; color: var(--tobacco); display: block; margin-bottom: 4px;">02</span>
+        Is it specific enough that no other platform could have made it?
+      </li>
+      <li style="padding: 22px 0; border-top: 1px solid var(--stone); border-bottom: 1px solid var(--stone); font-family: 'Fraunces'; font-size: 22px; line-height: 1.4;">
+        <span style="font-family: 'Karla'; font-size: 11px; letter-spacing: 0.2em; color: var(--tobacco); display: block; margin-bottom: 4px;">03</span>
+        Does it leave the mess in, or did it tidy up?
+      </li>
+    </ol>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Third Space — visual identity toolkit · v2</div>
+    <div><a href="../index.html" style="text-decoration: underline;">← Overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

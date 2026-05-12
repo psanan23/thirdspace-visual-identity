@@ -1,0 +1,522 @@
+/* Third Space — Visual Identity Toolkit
+   Shared stylesheet. Edit here, change everywhere. */
+
+:root {
+  --bone: #F2EDE3;
+  --ink: #1A1816;
+  --tobacco: #6B4F3A;
+  --honey: #C9A06B;
+  --blush: #E8C5B5;
+  --linen: #E8E1D4;
+  --stone: #B0A89C;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bone);
+  color: var(--ink);
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ───── Layout ─────────────────────────────────────────────── */
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 8%; }
+
+.site-header {
+  border-bottom: 1px solid var(--ink);
+  padding: 28px 0;
+  position: sticky;
+  top: 0;
+  background: var(--bone);
+  z-index: 50;
+}
+.site-header .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 32px;
+}
+.site-logo {
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+.site-nav {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tobacco);
+}
+.site-nav a { transition: color .15s; }
+.site-nav a:hover, .site-nav a.active { color: var(--ink); }
+
+main { padding: 64px 0 96px; }
+
+.hero {
+  padding: 80px 0 64px;
+  border-bottom: 1px solid var(--stone);
+  margin-bottom: 64px;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--tobacco);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.98;
+  letter-spacing: -0.005em;
+  margin-bottom: 24px;
+  max-width: 14ch;
+}
+.hero p.lede {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.35;
+  color: var(--tobacco);
+  max-width: 42ch;
+}
+.meta {
+  font-size: 12px;
+  color: var(--tobacco);
+  letter-spacing: 0.04em;
+  margin-top: 24px;
+}
+
+section { padding: 64px 0; border-bottom: 1px solid var(--stone); }
+section:last-of-type { border-bottom: none; }
+
+h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.section-intro {
+  font-size: 15px;
+  color: var(--tobacco);
+  margin-bottom: 40px;
+  max-width: 60ch;
+  line-height: 1.6;
+}
+p { max-width: 64ch; margin-bottom: 16px; }
+
+/* ───── Cards / grids ──────────────────────────────────────── */
+
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 720px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--bone);
+  border: 1px solid var(--stone);
+  padding: 28px;
+}
+.card.dark { background: var(--ink); color: var(--bone); border: none; }
+.card h3 { color: inherit; }
+
+/* ───── Pills, tags ────────────────────────────────────────── */
+
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--tobacco);
+  font-weight: 500;
+  padding: 4px 0;
+}
+.pill {
+  display: inline-block;
+  border: 1px solid var(--stone);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tobacco);
+}
+
+/* ───── Color palette ──────────────────────────────────────── */
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+@media (max-width: 900px) { .palette { grid-template-columns: repeat(3, 1fr); } }
+.swatch {
+  aspect-ratio: 1 / 1.1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(26, 24, 22, 0.08);
+}
+.swatch .top {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.swatch .name {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+.swatch .hex {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  margin-top: 6px;
+}
+
+/* ───── Typography demos ───────────────────────────────────── */
+
+.type-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-top: 1px solid var(--stone);
+  align-items: center;
+}
+.type-row:last-child { border-bottom: 1px solid var(--stone); }
+.type-label {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--tobacco);
+}
+.type-label .role {
+  display: block;
+  color: var(--ink);
+  margin-top: 6px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 13px;
+}
+.type-headline {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.05;
+}
+.type-quote {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.15;
+}
+.type-body {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 540px;
+}
+.type-tag {
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--tobacco);
+}
+
+/* ───── Posts (1:1 squares) ────────────────────────────────── */
+
+.templates {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+@media (max-width: 900px) { .templates { grid-template-columns: repeat(2, 1fr); } }
+.post-wrap .post-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--tobacco);
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.post-wrap .post-sublabel {
+  font-size: 12px;
+  color: var(--ink);
+  opacity: 0.7;
+}
+.post {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(26, 24, 22, 0.06);
+}
+
+/* Cover */
+.post-cover {
+  background: var(--bone);
+  padding: 12% 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.post-cover .pillar {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--tobacco);
+  margin-bottom: 24px;
+}
+.post-cover h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: clamp(20px, 2.4vw, 32px);
+  line-height: 1.05;
+  color: var(--ink);
+}
+.post-cover .name {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--tobacco);
+  margin-top: 16px;
+}
+
+/* Pull quote */
+.post-quote {
+  background: var(--bone);
+  padding: 14% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.post-quote .quote {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(16px, 1.8vw, 22px);
+  line-height: 1.2;
+  color: var(--ink);
+}
+.post-quote .attr {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--tobacco);
+  letter-spacing: 0.04em;
+}
+
+/* Portrait */
+.post-portrait {
+  background-color: var(--ink);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.post-portrait::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 35%;
+  background: linear-gradient(to top, rgba(20, 16, 13, 0.7), transparent);
+}
+.post-portrait .attr {
+  position: absolute;
+  bottom: 8%; left: 8%;
+  font-family: 'Inter';
+  color: var(--bone);
+  font-size: 11px;
+  z-index: 2;
+}
+
+/* Atmospheric */
+.post-atm { background-color: var(--linen); background-size: cover; background-position: center; }
+
+/* Editor's note */
+.post-note {
+  background: var(--linen);
+  padding: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.post-note p {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(13px, 1.4vw, 17px);
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0;
+  max-width: none;
+}
+.post-note .signoff {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 11px;
+  color: var(--tobacco);
+  margin-top: 18px;
+}
+
+/* Feed mock (3-up grid) */
+.feed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  max-width: 620px;
+}
+.feed .post { aspect-ratio: 1 / 1; }
+.feed .post-cover h3 { font-size: 18px; }
+.feed .post-cover .pillar { font-size: 7px; margin-bottom: 14px; }
+.feed .post-cover .name { font-size: 10px; margin-top: 10px; }
+.feed .post-quote .quote { font-size: 13px; }
+.feed .post-quote .attr { font-size: 7px; }
+.feed .post-note p { font-size: 10px; }
+.feed .post-note .signoff { font-size: 7px; margin-top: 8px; }
+
+/* ───── Rules / numbered lists ─────────────────────────────── */
+
+.rules {
+  background: var(--ink);
+  color: var(--bone);
+  padding: 64px 8%;
+  margin: 32px 0;
+}
+.rules h2 { color: var(--bone); }
+.rules ol {
+  list-style: none;
+  counter-reset: rule-counter;
+  margin-top: 32px;
+}
+.rules li {
+  counter-increment: rule-counter;
+  padding: 22px 0 22px 72px;
+  border-top: 1px solid rgba(242, 237, 227, 0.15);
+  position: relative;
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.3;
+}
+.rules li:last-child { border-bottom: 1px solid rgba(242, 237, 227, 0.15); }
+.rules li::before {
+  content: counter(rule-counter, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 26px;
+  font-family: 'Inter';
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--honey);
+  font-weight: 500;
+}
+
+/* ───── Do / Don't ─────────────────────────────────────────── */
+
+.do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 720px) { .do-dont { grid-template-columns: 1fr; } }
+.do-dont .col {
+  padding: 28px;
+  border: 1px solid var(--stone);
+}
+.do-dont h3 {
+  font-family: 'Inter';
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.do-dont .do h3 { color: var(--tobacco); }
+.do-dont .dont h3 { color: var(--ink); opacity: 0.5; }
+.do-dont ul { list-style: none; }
+.do-dont li {
+  padding: 10px 0 10px 24px;
+  border-top: 1px solid var(--stone);
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.do-dont li:first-child { border-top: none; }
+.do-dont .do li::before { content: '+'; position: absolute; left: 0; color: var(--tobacco); font-weight: 500; }
+.do-dont .dont li::before { content: '−'; position: absolute; left: 0; color: var(--ink); opacity: 0.5; }
+
+/* ───── Footer ─────────────────────────────────────────────── */
+
+.site-footer {
+  border-top: 1px solid var(--ink);
+  padding: 48px 0;
+  font-size: 12px;
+  color: var(--tobacco);
+}
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 32px;
+}
+
+/* ───── Utilities ──────────────────────────────────────────── */
+
+.placeholder {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    rgba(107, 79, 58, 0.08) 6px,
+    rgba(107, 79, 58, 0.08) 12px
+  );
+  border: 1px dashed var(--tobacco);
+  padding: 28px;
+  color: var(--tobacco);
+  font-style: italic;
+  font-size: 14px;
+}
+.placeholder strong { font-style: normal; font-weight: 500; letter-spacing: 0.04em; }
+
+.note {
+  background: var(--linen);
+  padding: 24px 28px;
+  border-left: 3px solid var(--honey);
+  margin: 24px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 64ch;
+}
+.note strong { color: var(--tobacco); letter-spacing: 0.02em; }

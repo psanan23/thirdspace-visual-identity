@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo — Third Space Visual Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .wordmark-feature {
+    background: var(--bone);
+    border: 1px solid var(--stone);
+    padding: 120px 32px 64px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .wordmark-feature .wm {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    line-height: 1;
+    font-size: clamp(56px, 8vw, 88px);
+  }
+  .wordmark-feature .wm div + div { margin-top: 6px; }
+  .wordmark-feature.dark { background: var(--ink); }
+  .wordmark-feature.dark .wm { color: var(--bone); }
+  .wordmark-feature .wm-meta {
+    font-family: 'Karla';
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--tobacco);
+    margin-top: 48px;
+  }
+  .wordmark-feature.dark .wm-meta { color: var(--honey); }
+
+  .scale-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: end;
+  }
+  @media (max-width: 800px) { .scale-grid { grid-template-columns: repeat(2, 1fr); } }
+  .scale-item { text-align: center; }
+  .scale-item .wm {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .scale-item .label {
+    font-family: 'Karla';
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--tobacco);
+    margin-top: 16px;
+  }
+
+  .profile-test {
+    display: flex;
+    gap: 48px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .profile-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: var(--bone);
+    border: 1px solid var(--stone);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-circle.dark { background: var(--ink); }
+  .profile-circle .wm {
+    font-family: 'Fraunces';
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-align: center;
+    line-height: 1;
+  }
+  .profile-circle.dark .wm { color: var(--bone); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-logo"><a href="../index.html">THIRD&nbsp;SPACE — visual identity</a></div>
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="brand.html">Brand</a>
+      <a href="color.html">Color</a>
+      <a href="type.html">Type</a>
+      <a href="logo.html" class="active">Logo</a>
+      <a href="posts.html">Posts</a>
+      <a href="photography.html">Photography</a>
+      <a href="voice.html">Voice</a>
+      <a href="ai-brief.html">Brief an AI</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">04 — Logo / Wordmark</div>
+    <h1>Fraunces, stacked.</h1>
+    <p class="lede">No icon, no monogram, no symbol. The name carries the brand — set in Fraunces Medium, all caps, broken across two lines. A book imprint, not a startup logo.</p>
+  </section>
+
+  <section>
+    <span class="tag">The wordmark · locked v2</span>
+
+    <div class="wordmark-feature">
+      <div class="wm">
+        <div>THIRD</div>
+        <div>SPACE</div>
+      </div>
+      <div class="wm-meta">Primary · Fraunces Medium 500 · 0.18em tracking · Ink on Bone</div>
+    </div>
+
+    <div class="wordmark-feature dark">
+      <div class="wm">
+        <div>THIRD</div>
+        <div>SPACE</div>
+      </div>
+      <div class="wm-meta">Reversed · Fraunces Medium · Bone on Ink</div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Scale</span>
+    <h2>How it sits at different sizes.</h2>
+    <p class="section-intro">The wordmark scales linearly. No optical tweaking. Tracking stays 0.18em at every size; only the size itself changes.</p>
+
+    <div class="scale-grid">
+      <div class="scale-item">
+        <div class="wm" style="font-size: 14px;">THIRD<br>SPACE</div>
+        <div class="label">Small · 14px</div>
+      </div>
+      <div class="scale-item">
+        <div class="wm" style="font-size: 22px;">THIRD<br>SPACE</div>
+        <div class="label">Medium · 22px</div>
+      </div>
+      <div class="scale-item">
+        <div class="wm" style="font-size: 36px;">THIRD<br>SPACE</div>
+        <div class="label">Cover post · 36px</div>
+      </div>
+      <div class="scale-item">
+        <div class="wm" style="font-size: 56px;">THIRD<br>SPACE</div>
+        <div class="label">Hero · 56px+</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Profile photo</span>
+    <h2>At Instagram profile size.</h2>
+    <p class="section-intro">110 × 110 px is the smallest the wordmark ever has to survive. On Bone and on Ink — both options sit comfortably at this scale.</p>
+
+    <div class="profile-test">
+      <div style="text-align: center;">
+        <div class="profile-circle">
+          <div class="wm">THIRD<br>SPACE</div>
+        </div>
+        <div class="label" style="margin-top: 12px; font-family: 'Karla'; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tobacco);">Ink on Bone</div>
+      </div>
+      <div style="text-align: center;">
+        <div class="profile-circle dark">
+          <div class="wm">THIRD<br>SPACE</div>
+        </div>
+        <div class="label" style="margin-top: 12px; font-family: 'Karla'; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tobacco);">Bone on Ink</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="rules">
+      <span class="tag" style="color: var(--honey);">Wordmark rules</span>
+      <h2 style="color: var(--bone);">Six rules, no exceptions.</h2>
+      <ol>
+        <li>Fraunces Medium 500, all caps, stacked on two lines: THIRD / SPACE. Nothing else is the wordmark.</li>
+        <li>Tracking is 0.18em. Line-height is 1. Never adjust these.</li>
+        <li>The wordmark goes in Ink on Bone, or Bone on Ink. No other colour.</li>
+        <li>No icon, no monogram, no swirl, no symbol next to it.</li>
+        <li>No tagline next to the wordmark. The IG bio holds the line.</li>
+        <li>The wordmark only appears on Cover posts and the IG profile. Not on every post.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="border-bottom: none;">
+    <span class="tag">Why this and not the other</span>
+    <h2>The masthead alternative.</h2>
+    <p class="section-intro">A Karla wide-spaced masthead was considered. The stacked Fraunces wins on distinctiveness — the serif carries the editorial register the brand needs, and the stacking is unusual enough in the SEA market to read as ours. <a href="../decisions/index.html" style="text-decoration: underline;">See the full decisions log →</a></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Third Space — visual identity toolkit · v2</div>
+    <div><a href="../index.html" style="text-decoration: underline;">← Overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

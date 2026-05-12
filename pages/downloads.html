@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Downloads — Third Space Visual Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .dl-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid var(--stone);
+    align-items: center;
+  }
+  .dl-row:last-child { border-bottom: 1px solid var(--stone); }
+  .dl-row .label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tobacco); margin-bottom: 4px; }
+  .dl-row .name { font-family: 'Fraunces'; font-weight: 400; font-size: 22px; line-height: 1.2; }
+  .dl-row .desc { font-size: 13px; color: var(--ink); opacity: 0.75; margin-top: 4px; }
+  .dl-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--ink);
+    color: var(--bone);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background .15s;
+  }
+  .dl-btn:hover { background: var(--tobacco); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-logo"><a href="../index.html">THIRD&nbsp;SPACE — visual identity</a></div>
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="brand.html">Brand</a>
+      <a href="color.html">Color</a>
+      <a href="type.html">Type</a>
+      <a href="logo.html">Logo</a>
+      <a href="posts.html">Posts</a>
+      <a href="photography.html">Photography</a>
+      <a href="voice.html">Voice</a>
+      <a href="ai-brief.html">Brief an AI</a>
+      <a href="downloads.html" class="active">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">09 — Downloads</div>
+    <h1>Everything you'd actually pull off this page.</h1>
+    <p class="lede">Fonts, swatches, the brand brief PDF. Nothing else lives here — finished posts and photos belong in your Drive, not in the rulebook.</p>
+  </section>
+
+  <section>
+    <span class="tag">Fonts</span>
+    <h2>Fraunces + Karla.</h2>
+    <p class="section-intro">Both free on Google Fonts. The link below is the same one whether you're styling a website, a Canva post, or installing on your laptop. On Google Fonts, click "Get font" to download / install.</p>
+
+    <div class="dl-row">
+      <div>
+        <div class="label">Serif · big text</div>
+        <div class="name">Fraunces</div>
+        <div class="desc">Headlines, pull quotes, editor's notes, the wordmark. Variable serif by Undercase Type. Pick weights 300, 400, 500 + italic 400.</div>
+      </div>
+      <a class="dl-btn" href="https://fonts.google.com/specimen/Fraunces" target="_blank">Get on Google Fonts ↗</a>
+    </div>
+
+    <div class="dl-row">
+      <div>
+        <div class="label">Sans · small text</div>
+        <div class="name">Karla</div>
+        <div class="desc">Body, captions, attribution. Humanist sans-serif by Jonathan Pinhorn. Pick weights 400 + 500.</div>
+      </div>
+      <a class="dl-btn" href="https://fonts.google.com/specimen/Karla" target="_blank">Get on Google Fonts ↗</a>
+    </div>
+
+    <div class="dl-row">
+      <div>
+        <div class="label">For Canva specifically</div>
+        <div class="name">Search inside Canva</div>
+        <div class="desc">Canva has both fonts indexed under their exact names. Type "Fraunces" or "Karla" into the font picker. Free plan supports both.</div>
+      </div>
+      <span class="dl-btn" style="background: var(--tobacco); cursor: default;">No download needed</span>
+    </div>
+
+    <div class="dl-row">
+      <div>
+        <div class="label">For developers — paste into &lt;head&gt;</div>
+        <div class="name">Google Fonts CSS link</div>
+        <div class="desc">All weights this kit uses, in one stylesheet request.</div>
+      </div>
+      <a class="dl-btn" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Karla:wght@400;500;700&display=swap" target="_blank">Open .css</a>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Color values</span>
+    <h2>Hex, RGB, CSS variables.</h2>
+    <p class="section-intro">Copy whichever the tool needs. Most tools take HEX.</p>
+
+    <div class="card" style="background: var(--linen); border: none; font-family: 'Karla', monospace; font-size: 13px; line-height: 1.9;">
+      <div>Bone     · #F2EDE3 · rgb(242, 237, 227) · --bone</div>
+      <div>Ink      · #1A1816 · rgb(26, 24, 22)    · --ink</div>
+      <div>Tobacco  · #6B4F3A · rgb(107, 79, 58)   · --tobacco</div>
+      <div>Honey    · #C9A06B · rgb(201, 160, 107) · --honey</div>
+      <div>Blush    · #E8C5B5 · rgb(232, 197, 181) · --blush</div>
+      <div>Linen    · #E8E1D4 · rgb(232, 225, 212) · --linen</div>
+      <div>Stone    · #B0A89C · rgb(176, 168, 156) · --stone</div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Brand documents</span>
+    <h2>The source-of-truth files.</h2>
+    <p class="section-intro">These live in the main project folder, not in this repo. Linked here so you can find them.</p>
+
+    <div class="dl-row">
+      <div>
+        <div class="label">Catch-all explainer</div>
+        <div class="name">Manifesto PDF</div>
+        <div class="desc">Send to interview candidates before the first call. v3 — name reverted, opening prose final.</div>
+      </div>
+      <a class="dl-btn" href="../../manifesto-v2-2026-05-08.pdf" target="_blank">Open</a>
+    </div>
+
+    <div class="dl-row">
+      <div>
+        <div class="label">Editorial brief</div>
+        <div class="name">Source of Truth</div>
+        <div class="desc">Full brand brief: editorial vision, audience, content jobs, pillars, 90-day plan.</div>
+      </div>
+      <a class="dl-btn" href="../../SOURCE-OF-TRUTH.md" target="_blank">Open .md</a>
+    </div>
+
+    <div class="dl-row">
+      <div>
+        <div class="label">Audience</div>
+        <div class="name">Target Audience brief</div>
+        <div class="desc">Consumer-facing paragraph + full audience definition + tone guardrail.</div>
+      </div>
+      <a class="dl-btn" href="../../TARGET-AUDIENCE.md" target="_blank">Open .md</a>
+    </div>
+
+    <div class="dl-row">
+      <div>
+        <div class="label">v1 reference</div>
+        <div class="name">VISUAL-IDENTITY-v1 (May 2026)</div>
+        <div class="desc">The original visual identity spec this kit builds off. Kept for traceability.</div>
+      </div>
+      <a class="dl-btn" href="../../VISUAL-IDENTITY-v1-2026-05-08.md" target="_blank">Open .md</a>
+    </div>
+  </section>
+
+  <section style="border-bottom: none;">
+    <span class="tag">Still to come</span>
+    <h2>v3 will add.</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Canva templates</h3>
+        <p style="font-size: 13px;">Pre-built post templates for all five types. Drop in text and image. No design decisions needed.</p>
+      </div>
+      <div class="card">
+        <h3>Lightroom preset</h3>
+        <p style="font-size: 13px;">One preset for the chosen photography treatment. Two if Atmospheric needs a separate one.</p>
+      </div>
+      <div class="card">
+        <h3>Story / highlight covers</h3>
+        <p style="font-size: 13px;">A set of 6–8 highlight covers in the palette. Single-letter typographic system.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Third Space — visual identity toolkit · v2</div>
+    <div><a href="../index.html" style="text-decoration: underline;">← Overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

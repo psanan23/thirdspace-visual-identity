@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decisions log — Third Space</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .decision-log { border-top: 1px solid var(--stone); }
+  .decision-log .row {
+    display: grid;
+    grid-template-columns: 80px 1fr 220px;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--stone);
+    align-items: baseline;
+  }
+  @media (max-width: 800px) {
+    .decision-log .row { grid-template-columns: 1fr; gap: 8px; }
+  }
+  .decision-log .num {
+    font-family: 'Karla';
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--tobacco);
+    font-weight: 500;
+  }
+  .decision-log .title {
+    font-family: 'Fraunces';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .decision-log .reasoning {
+    font-size: 13px;
+    color: var(--ink);
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+  .decision-log .verdict {
+    font-family: 'Karla';
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--honey);
+    font-weight: 500;
+  }
+  .decision-log .verdict.open { color: var(--blush); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-logo"><a href="../index.html">THIRD&nbsp;SPACE — visual identity</a></div>
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="../pages/brand.html">Brand</a>
+      <a href="../pages/color.html">Color</a>
+      <a href="../pages/type.html">Type</a>
+      <a href="../pages/logo.html">Logo</a>
+      <a href="../pages/posts.html">Posts</a>
+      <a href="../pages/photography.html">Photography</a>
+      <a href="../pages/voice.html">Voice</a>
+      <a href="../pages/ai-brief.html">Brief an AI</a>
+      <a href="../pages/downloads.html">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">Decisions log</div>
+    <h1>What's been locked in v2.</h1>
+    <p class="lede">Every meaningful call this kit makes is logged here. Re-open one only if a new constraint forces it.</p>
+  </section>
+
+  <section>
+    <div class="decision-log">
+
+      <div class="row">
+        <div class="num">D01</div>
+        <div>
+          <div class="title">Font system: Fraunces (serif) + Karla (sans).</div>
+          <div class="reasoning">Replaces Cormorant Garamond + Inter from v1. Inter flagged as the #1 AI-generated-content tell; Cormorant Garamond also creeping into AI tools. Fraunces is a distinctive variable serif by Undercase Type — more characterful, less common. Karla is a humanist sans by Jonathan Pinhorn, not on any AI-bait list. Both free on Google Fonts, both work in Canva. <a href="fonts.html" style="text-decoration: underline;">See the six options that were considered →</a></div>
+        </div>
+        <div class="verdict">Locked · 2026-05-12</div>
+      </div>
+
+      <div class="row">
+        <div class="num">D02</div>
+        <div>
+          <div class="title">Photography: hybrid B&amp;W + warm muted colour.</div>
+          <div class="reasoning">Interview portraits (inside a Story Set: Cover, Pull quote, Portrait) are B&amp;W. Everything else (Atmospheric, non-interview content) stays in warm muted colour. Goop precedent — the visual cue separates "this is the real interview" from the rest of the feed without needing a label. Forces specificity in light and gesture, easier to keep consistent across iPhone shots.</div>
+        </div>
+        <div class="verdict">Locked · 2026-05-12</div>
+      </div>
+
+      <div class="row">
+        <div class="num">D03</div>
+        <div>
+          <div class="title">Pillar signposting: none.</div>
+          <div class="reasoning">No pillar tag, label, or icon on any post. Content, format, and visual treatment do the categorising. The feed teaches the system over the first few posts. Pillar tracking (Identity / Work / Relationships / The Unsaid) happens internally — in Notion, in the editorial calendar — not on the post itself.</div>
+        </div>
+        <div class="verdict">Locked · 2026-05-12</div>
+      </div>
+
+      <div class="row">
+        <div class="num">D04</div>
+        <div>
+          <div class="title">Wordmark: Fraunces, stacked caps.</div>
+          <div class="reasoning">THIRD / SPACE on two lines, Fraunces Medium 500, 0.18em tracking, Ink on Bone. Considered: a Karla wide-spaced masthead. Stacked Fraunces wins on distinctiveness — the serif carries the editorial register and the stacking is unusual enough in the SEA market to read as ours. <a href="../pages/logo.html" style="text-decoration: underline;">See it rendered →</a></div>
+        </div>
+        <div class="verdict">Locked · 2026-05-12</div>
+      </div>
+
+      <div class="row">
+        <div class="num">D05</div>
+        <div>
+          <div class="title">IG bio copy.</div>
+          <div class="reasoning">Three drafts on the table. Currently leading: "Stories of women building careers, raising children and making the choices in between." <a href="../pages/voice.html" style="text-decoration: underline;">See all three →</a></div>
+        </div>
+        <div class="verdict open">Open</div>
+      </div>
+
+      <div class="row">
+        <div class="num">D06</div>
+        <div>
+          <div class="title">Photography shooting + editing guide.</div>
+          <div class="reasoning">The actual "how to shoot a B&amp;W portrait on iPhone Pro Max" guide. Subject framing, light, white balance, presets. Largest open piece in the kit; deferred to v3.</div>
+        </div>
+        <div class="verdict open">Deferred · v3</div>
+      </div>
+
+      <div class="row">
+        <div class="num">D07</div>
+        <div>
+          <div class="title">Canva production templates.</div>
+          <div class="reasoning">Pre-built 1080×1080 templates for all five post types. Drop in text and image, post. Deferred to v3 — needs the wordmark direction locked first.</div>
+        </div>
+        <div class="verdict open">Deferred · v3</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="border-bottom: none;">
+    <span class="tag">How the log is used</span>
+    <h2>This page is the receipt.</h2>
+    <p class="section-intro">When a future iteration considers changing one of the locked decisions, this is where the reasoning lives. Don't undo a decision without writing a new entry that explains why.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Third Space — decisions log · v2</div>
+    <div><a href="../index.html" style="text-decoration: underline;">← Overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

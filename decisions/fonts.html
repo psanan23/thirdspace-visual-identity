@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Font system — Third Space decisions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  :root {
+    --serif: 'Cormorant Garamond', serif;
+  }
+  .font-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 16px;
+  }
+  @media (max-width: 900px) { .font-grid { grid-template-columns: 1fr; } }
+
+  .font-option {
+    background: var(--bone);
+    border: 1px solid var(--stone);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .font-option .opt-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--stone);
+    padding-bottom: 14px;
+  }
+  .font-option .opt-num {
+    font-family: 'Inter';
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--tobacco);
+    font-weight: 500;
+  }
+  .font-option .opt-pair {
+    font-family: 'Cormorant Garamond';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.1;
+  }
+
+  /* Mini mockup post + caption */
+  .mini-post {
+    background: var(--bone);
+    border: 1px solid var(--stone);
+    aspect-ratio: 1 / 1;
+    padding: 14% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mini-post .mini-head {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.05;
+  }
+  .mini-post .mini-name {
+    font-style: italic;
+    font-size: 11px;
+    color: var(--tobacco);
+    margin-top: 12px;
+  }
+  .mini-caption-row {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .mini-caption-row .lab {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--tobacco);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .pairing-notes {
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--ink);
+    opacity: 0.85;
+    border-top: 1px solid var(--stone);
+    padding-top: 14px;
+  }
+
+  /* Per-option font assignments */
+  .opt-a .mini-head,
+  .opt-a .mini-name,
+  .opt-a .pair-name { font-family: var(--serif); }
+  .opt-a .mini-caption-row,
+  .opt-a .mini-caption-row .lab { font-family: 'Karla', sans-serif; }
+
+  .opt-b .mini-head,
+  .opt-b .mini-name,
+  .opt-b .pair-name { font-family: var(--serif); }
+  .opt-b .mini-caption-row,
+  .opt-b .mini-caption-row .lab { font-family: 'IBM Plex Sans', sans-serif; }
+
+  .opt-c .mini-head,
+  .opt-c .mini-name,
+  .opt-c .pair-name { font-family: var(--serif); }
+  .opt-c .mini-caption-row,
+  .opt-c .mini-caption-row .lab { font-family: 'Public Sans', sans-serif; }
+
+  /* All-serif option D — body in Newsreader */
+  .opt-d .mini-head,
+  .opt-d .mini-name,
+  .opt-d .pair-name { font-family: var(--serif); }
+  .opt-d .mini-caption-row {
+    font-family: 'Newsreader', serif;
+    font-size: 14px;
+  }
+  .opt-d .mini-caption-row .lab {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--tobacco);
+    font-size: 11px;
+    font-weight: 400;
+  }
+
+  /* Alt serif option E — Fraunces (instead of Cormorant) + Karla */
+  .opt-e .mini-head,
+  .opt-e .pair-name {
+    font-family: 'Fraunces', serif;
+      }
+  .opt-e .mini-name { font-family: 'Fraunces', serif; }
+  .opt-e .mini-caption-row,
+  .opt-e .mini-caption-row .lab { font-family: 'Karla', sans-serif; }
+
+  /* Alt serif option F — Spectral throughout */
+  .opt-f .mini-head,
+  .opt-f .mini-name,
+  .opt-f .pair-name { font-family: 'Spectral', serif; }
+  .opt-f .mini-caption-row { font-family: 'Spectral', serif; font-size: 14px; }
+  .opt-f .mini-caption-row .lab {
+    font-family: 'Spectral', serif;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--tobacco);
+    font-size: 11px;
+  }
+
+  .wordmark-row {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    padding: 14px 0;
+    border-top: 1px solid var(--stone);
+    border-bottom: 1px solid var(--stone);
+    justify-content: space-between;
+  }
+  .wordmark-row .wm {
+    font-size: 18px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .wordmark-row .stacked {
+    font-size: 28px;
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-logo"><a href="../index.html">THIRD&nbsp;SPACE — visual identity</a></div>
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="../pages/brand.html">Brand</a>
+      <a href="../pages/color.html">Color</a>
+      <a href="../pages/type.html">Type</a>
+      <a href="../pages/logo.html">Logo</a>
+      <a href="../pages/posts.html">Posts</a>
+      <a href="../pages/photography.html">Photography</a>
+      <a href="../pages/voice.html">Voice</a>
+      <a href="../pages/ai-brief.html">Brief an AI</a>
+      <a href="../pages/downloads.html">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">Open decision · font system</div>
+    <h1>Six font pairings, mocked up.</h1>
+    <p class="lede">You flagged Inter as a top AI-tell. Cormorant Garamond stays — you liked it in v1. The decision is what replaces Inter, or whether the system goes all-serif. All six options are free on Google Fonts.</p>
+  </section>
+
+  <section>
+    <p class="section-intro">Each card shows: the wordmark in that system + a mini Cover post + a sample caption + a one-line read on the trade-off. Pick the one that feels right.</p>
+
+    <div class="font-grid">
+
+      <!-- Option A — Cormorant + Karla -->
+      <div class="font-option opt-a">
+        <div class="opt-head">
+          <div class="opt-num">A</div>
+          <div class="opt-pair pair-name">Cormorant Garamond &nbsp;+&nbsp; <span style="font-family: 'Karla', sans-serif; font-weight: 500;">Karla</span></div>
+        </div>
+        <div class="wordmark-row">
+          <div class="wm" style="font-family: 'Karla', sans-serif;">THIRD SPACE</div>
+          <div class="stacked" style="font-family: var(--serif); font-weight: 500;">THIRD<br>SPACE</div>
+        </div>
+        <div class="mini-post">
+          <div class="mini-head">I rebuilt myself completely and didn't recognise her either.</div>
+          <div class="mini-name">Maya, 38</div>
+        </div>
+        <div class="mini-caption-row">
+          <span class="lab">Caption · Karla Regular</span>
+          Maya, 38. Founder of a clinic she built after leaving the VP track. Two daughters.
+        </div>
+        <div class="pairing-notes">Humanist sans, warmer than Inter, not on the AI-bait list. Reads "current" without screaming startup. Safe pick — distinctive enough, low risk.</div>
+      </div>
+
+      <!-- Option B — Cormorant + IBM Plex Sans -->
+      <div class="font-option opt-b">
+        <div class="opt-head">
+          <div class="opt-num">B</div>
+          <div class="opt-pair pair-name">Cormorant &nbsp;+&nbsp; <span style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 500;">IBM Plex Sans</span></div>
+        </div>
+        <div class="wordmark-row">
+          <div class="wm" style="font-family: 'IBM Plex Sans', sans-serif;">THIRD SPACE</div>
+          <div class="stacked" style="font-family: var(--serif); font-weight: 500;">THIRD<br>SPACE</div>
+        </div>
+        <div class="mini-post">
+          <div class="mini-head">I rebuilt myself completely and didn't recognise her either.</div>
+          <div class="mini-name">Maya, 38</div>
+        </div>
+        <div class="mini-caption-row">
+          <span class="lab">Caption · IBM Plex Sans Regular</span>
+          Maya, 38. Founder of a clinic she built after leaving the VP track. Two daughters.
+        </div>
+        <div class="pairing-notes">Slightly more technical, more editorial than Karla. Distinct shape (slab serif influence in the lowercase). Reads "considered, intentional." Bolder choice.</div>
+      </div>
+
+      <!-- Option C — Cormorant + Public Sans -->
+      <div class="font-option opt-c">
+        <div class="opt-head">
+          <div class="opt-num">C</div>
+          <div class="opt-pair pair-name">Cormorant &nbsp;+&nbsp; <span style="font-family: 'Public Sans', sans-serif; font-weight: 500;">Public Sans</span></div>
+        </div>
+        <div class="wordmark-row">
+          <div class="wm" style="font-family: 'Public Sans', sans-serif;">THIRD SPACE</div>
+          <div class="stacked" style="font-family: var(--serif); font-weight: 500;">THIRD<br>SPACE</div>
+        </div>
+        <div class="mini-post">
+          <div class="mini-head">I rebuilt myself completely and didn't recognise her either.</div>
+          <div class="mini-name">Maya, 38</div>
+        </div>
+        <div class="mini-caption-row">
+          <span class="lab">Caption · Public Sans Regular</span>
+          Maya, 38. Founder of a clinic she built after leaving the VP track. Two daughters.
+        </div>
+        <div class="pairing-notes">US government's open-source sans. Quietly distinctive, neutral without being Inter. Very low AI-usage rate. Less personality than Plex, more than Karla.</div>
+      </div>
+
+      <!-- Option D — Cormorant + Newsreader (all-serif system) -->
+      <div class="font-option opt-d">
+        <div class="opt-head">
+          <div class="opt-num">D · all-serif</div>
+          <div class="opt-pair pair-name">Cormorant &nbsp;+&nbsp; <span style="font-family: 'Newsreader', serif;">Newsreader</span></div>
+        </div>
+        <div class="wordmark-row">
+          <div class="wm" style="font-family: 'Newsreader', serif;">THIRD SPACE</div>
+          <div class="stacked" style="font-family: var(--serif); font-weight: 500;">THIRD<br>SPACE</div>
+        </div>
+        <div class="mini-post">
+          <div class="mini-head">I rebuilt myself completely and didn't recognise her either.</div>
+          <div class="mini-name">Maya, 38</div>
+        </div>
+        <div class="mini-caption-row">
+          <span class="lab">Caption · Newsreader Regular</span>
+          Maya, 38. Founder of a clinic she built after leaving the VP track. Two daughters.
+        </div>
+        <div class="pairing-notes">No sans at all. Maximum editorial register — closer to Goop and Luminary Mothers. Captions and body sit in Newsreader, a serif designed for screen reading. Most distinctive option. Least "tech."</div>
+      </div>
+
+      <!-- Option E — Fraunces + Karla (replace Cormorant) -->
+      <div class="font-option opt-e">
+        <div class="opt-head">
+          <div class="opt-num">E · alt serif</div>
+          <div class="opt-pair pair-name"><span style="font-family: 'Fraunces', serif; ">Fraunces</span> &nbsp;+&nbsp; <span style="font-family: 'Karla', sans-serif; font-weight: 500;">Karla</span></div>
+        </div>
+        <div class="wordmark-row">
+          <div class="wm" style="font-family: 'Karla', sans-serif;">THIRD SPACE</div>
+          <div class="stacked" style="font-family: 'Fraunces', serif; font-weight: 500; ">THIRD<br>SPACE</div>
+        </div>
+        <div class="mini-post">
+          <div class="mini-head">I rebuilt myself completely and didn't recognise her either.</div>
+          <div class="mini-name">Maya, 38</div>
+        </div>
+        <div class="mini-caption-row">
+          <span class="lab">Caption · Karla Regular</span>
+          Maya, 38. Founder of a clinic she built after leaving the VP track. Two daughters.
+        </div>
+        <div class="pairing-notes">Replaces Cormorant with Fraunces — a more distinctive variable serif with a softer, more characterful feel. Less common than Cormorant Garamond (which is also creeping into AI tools). Higher upside for distinctiveness.</div>
+      </div>
+
+      <!-- Option F — Spectral (all-serif, more refined) -->
+      <div class="font-option opt-f">
+        <div class="opt-head">
+          <div class="opt-num">F · all-serif alt</div>
+          <div class="opt-pair pair-name"><span style="font-family: 'Spectral', serif;">Spectral</span> throughout</div>
+        </div>
+        <div class="wordmark-row">
+          <div class="wm" style="font-family: 'Spectral', serif; font-weight: 500;">THIRD SPACE</div>
+          <div class="stacked" style="font-family: 'Spectral', serif; font-weight: 500;">THIRD<br>SPACE</div>
+        </div>
+        <div class="mini-post">
+          <div class="mini-head">I rebuilt myself completely and didn't recognise her either.</div>
+          <div class="mini-name">Maya, 38</div>
+        </div>
+        <div class="mini-caption-row">
+          <span class="lab">Caption · Spectral Regular</span>
+          Maya, 38. Founder of a clinic she built after leaving the VP track. Two daughters.
+        </div>
+        <div class="pairing-notes">One typeface, top to bottom. Spectral is a contemporary serif by Production Type, free on Google Fonts. More restrained than Cormorant. The most singular, "house style" option — closest to brand-as-publication.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="border-bottom: none;">
+    <h2>How to pick</h2>
+    <p class="section-intro">Reply with the letter (A–F). If you want to mix elements — e.g. "the wordmark from D but body from C" — say that too.</p>
+    <p class="section-intro" style="font-size: 13px;">Where each font comes from: <a href="https://fonts.google.com/specimen/Karla" target="_blank" style="text-decoration: underline;">Karla</a> · <a href="https://fonts.google.com/specimen/IBM+Plex+Sans" target="_blank" style="text-decoration: underline;">IBM Plex Sans</a> · <a href="https://fonts.google.com/specimen/Public+Sans" target="_blank" style="text-decoration: underline;">Public Sans</a> · <a href="https://fonts.google.com/specimen/Newsreader" target="_blank" style="text-decoration: underline;">Newsreader</a> · <a href="https://fonts.google.com/specimen/Fraunces" target="_blank" style="text-decoration: underline;">Fraunces</a> · <a href="https://fonts.google.com/specimen/Spectral" target="_blank" style="text-decoration: underline;">Spectral</a>. All free, all on Google Fonts, all available in Canva.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Third Space — key decisions · v2</div>
+    <div><a href="index.html" style="text-decoration: underline;">← All decisions</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

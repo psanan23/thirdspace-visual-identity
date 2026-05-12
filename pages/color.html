@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Color — Third Space Visual Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .combo {
+    aspect-ratio: 4 / 3;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(26, 24, 22, 0.06);
+  }
+  .combo .title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.1;
+  }
+  .combo .meta-row {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-logo"><a href="../index.html">THIRD&nbsp;SPACE — visual identity</a></div>
+    <nav class="site-nav">
+      <a href="../index.html">Overview</a>
+      <a href="brand.html">Brand</a>
+      <a href="color.html" class="active">Color</a>
+      <a href="type.html">Type</a>
+      <a href="logo.html">Logo</a>
+      <a href="posts.html">Posts</a>
+      <a href="photography.html">Photography</a>
+      <a href="voice.html">Voice</a>
+      <a href="ai-brief.html">Brief an AI</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">02 — Color</div>
+    <h1>Five colours, two backups.</h1>
+    <p class="lede">Warm and quiet. None of them are pure black, pure white, or bright. Get this right and the rest of the system holds.</p>
+  </section>
+
+  <section>
+    <span class="tag">The palette</span>
+    <h2>What each colour is for.</h2>
+    <p class="section-intro">Bone and Ink do most of the work. Tobacco carries second-tier text. Honey and Blush are the moments of life.</p>
+
+    <div class="palette">
+      <div class="swatch" style="background: var(--bone); color: var(--ink);">
+        <div class="top">Default background</div>
+        <div>
+          <div class="name">Bone</div>
+          <div class="hex">#F2EDE3</div>
+        </div>
+      </div>
+      <div class="swatch" style="background: var(--ink); color: var(--bone);">
+        <div class="top">Text · rare backdrop</div>
+        <div>
+          <div class="name">Ink</div>
+          <div class="hex">#1A1816</div>
+        </div>
+      </div>
+      <div class="swatch" style="background: var(--tobacco); color: var(--bone);">
+        <div class="top">Pillar tags, attribution</div>
+        <div>
+          <div class="name">Tobacco</div>
+          <div class="hex">#6B4F3A</div>
+        </div>
+      </div>
+      <div class="swatch" style="background: var(--honey); color: var(--ink);">
+        <div class="top">A touch of life</div>
+        <div>
+          <div class="name">Honey</div>
+          <div class="hex">#C9A06B</div>
+        </div>
+      </div>
+      <div class="swatch" style="background: var(--blush); color: var(--ink);">
+        <div class="top">Featured story · 1 in 9</div>
+        <div>
+          <div class="name">Blush</div>
+          <div class="hex">#E8C5B5</div>
+        </div>
+      </div>
+      <div class="swatch" style="background: var(--linen); color: var(--ink);">
+        <div class="top">Backup neutral · Editor's note</div>
+        <div>
+          <div class="name">Linen</div>
+          <div class="hex">#E8E1D4</div>
+        </div>
+      </div>
+      <div class="swatch" style="background: var(--stone); color: var(--ink);">
+        <div class="top">Lines, dividers only</div>
+        <div>
+          <div class="name">Stone</div>
+          <div class="hex">#B0A89C</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Combinations that work</span>
+    <h2>How they pair on a post.</h2>
+    <p class="section-intro">Use these as your defaults. If a draft uses a combination you don't see here, it probably isn't ours.</p>
+
+    <div class="grid-3">
+      <div class="combo" style="background: var(--bone); color: var(--ink);">
+        <div class="meta-row" style="color: var(--tobacco);">Default — 2 in 3 posts</div>
+        <div>
+          <div class="title">Bone background, Ink text, Tobacco tag.</div>
+        </div>
+        <div class="meta-row" style="color: var(--tobacco);">Bone · Ink · Tobacco</div>
+      </div>
+      <div class="combo" style="background: var(--ink); color: var(--bone);">
+        <div class="meta-row" style="color: var(--honey);">Rare — 1 in 9 posts</div>
+        <div>
+          <div class="title" style="color: var(--bone);">Ink background, Bone text, Honey accent.</div>
+        </div>
+        <div class="meta-row" style="color: var(--honey);">Ink · Bone · Honey</div>
+      </div>
+      <div class="combo" style="background: var(--linen); color: var(--ink);">
+        <div class="meta-row" style="color: var(--tobacco);">Editor's note only</div>
+        <div>
+          <div class="title">Linen background, Ink text, italic Tobacco signoff.</div>
+        </div>
+        <div class="meta-row" style="color: var(--tobacco);">Linen · Ink · Tobacco</div>
+      </div>
+      <div class="combo" style="background: var(--blush); color: var(--ink);">
+        <div class="meta-row" style="color: var(--tobacco);">Featured moment · max 1 in 9</div>
+        <div>
+          <div class="title">Blush background, Ink text. Featured story only.</div>
+        </div>
+        <div class="meta-row" style="color: var(--tobacco);">Blush · Ink</div>
+      </div>
+      <div class="combo" style="background: var(--honey); color: var(--ink);">
+        <div class="meta-row" style="color: var(--tobacco);">Occasional surface</div>
+        <div>
+          <div class="title">Honey background, Ink text, Tobacco accent.</div>
+        </div>
+        <div class="meta-row" style="color: var(--tobacco);">Honey · Ink · Tobacco</div>
+      </div>
+      <div class="combo" style="background: var(--tobacco); color: var(--bone);">
+        <div class="meta-row" style="color: var(--honey);">Almost never</div>
+        <div>
+          <div class="title" style="color: var(--bone);">Tobacco background — sparingly, as a dark warmth alternative to Ink.</div>
+        </div>
+        <div class="meta-row" style="color: var(--honey);">Tobacco · Bone · Honey</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="rules">
+      <span class="tag" style="color: var(--honey);">Color rules</span>
+      <h2 style="color: var(--bone);">Don't break these.</h2>
+      <ol>
+        <li>Two out of every three posts use Bone as the background.</li>
+        <li>Honey + Tobacco is great. Honey + Blush is great. Don't invent other combinations.</li>
+        <li>Never use more than three colours on a single post.</li>
+        <li>No pure white. No pure black. No bright colour. Ever.</li>
+        <li>Blush is for featured-story moments only. Max one in nine posts.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="border-bottom: none;">
+    <span class="tag">For developers / AI tools</span>
+    <h2>Copy-paste values.</h2>
+    <div class="card" style="font-family: 'Karla', monospace; font-size: 13px; line-height: 1.8; background: var(--linen); border: none;">
+      <div>--bone: #F2EDE3;</div>
+      <div>--ink: #1A1816;</div>
+      <div>--tobacco: #6B4F3A;</div>
+      <div>--honey: #C9A06B;</div>
+      <div>--blush: #E8C5B5;</div>
+      <div>--linen: #E8E1D4;</div>
+      <div>--stone: #B0A89C;</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Third Space — visual identity toolkit · v2</div>
+    <div><a href="../index.html" style="text-decoration: underline;">← Overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
