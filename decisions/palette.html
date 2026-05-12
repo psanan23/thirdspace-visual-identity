@@ -196,6 +196,23 @@
   .d-terracotta { background: var(--d-terracotta); color: var(--d-bone); }
   .d-cobalt { background: var(--d-cobalt); color: var(--d-bone); }
   .d-forest { background: var(--d-forest); color: var(--d-bone); }
+
+  /* === E · GALLERY + WARMTH (C + A mix) === */
+  :root {
+    --e-cream: #F4ECDF;
+    --e-ink: #1A1816;
+    --e-cobalt: #1F3A8A;
+    --e-terracotta: #C8623B;
+    --e-tobacco: #6B4F3A;
+    --e-mustard: #D6A538;
+  }
+  .e-cream { background: var(--e-cream); color: var(--e-ink); }
+  .e-ink { background: var(--e-ink); color: var(--e-cream); }
+  .e-cobalt { background: var(--e-cobalt); color: var(--e-cream); }
+  .e-terracotta { background: var(--e-terracotta); color: var(--e-cream); }
+  .e-tobacco { background: var(--e-tobacco); color: var(--e-cream); }
+  .e-mustard { background: var(--e-mustard); color: var(--e-ink); }
+  .swatch-strip.six { grid-template-columns: repeat(6, 1fr); }
 </style>
 </head>
 <body>
@@ -369,6 +386,66 @@
 
       <div class="tradeoff">
         <strong>Where it wins:</strong> each Story Set gets a feature colour assigned (e.g. Maya = terracotta, Naomi = cobalt). The feed becomes a chromatic mosaic without ever using more than two colours on a single post. Closest to Vogue's <em>November</em> + <em>October</em> cover variety. <strong>Why this respects the pillar guardrail:</strong> no single colour codes to one pillar — Maya in terracotta could be Identity, the next subject in cobalt could be Work, and the feed reads broad. <strong>Risk:</strong> hardest to keep disciplined. Needs a rule that says <em>one feature colour per Story Set, picked at the editorial planning stage, not by mood.</em>
+      </div>
+    </div>
+
+    <!-- ════════════════ E · GALLERY + WARMTH (C + A mix) ════════════════ -->
+    <div class="direction" style="border-top: 3px solid var(--honey); padding-top: 48px;">
+      <div class="dir-head">
+        <div class="num">E · new</div>
+        <div>
+          <h2>Gallery + Warmth <span style="font-size: 16px; color: var(--tobacco); font-style: italic;">— C + A mix</span></h2>
+          <div class="ref">Cobalt from Loewe Gallery (C) carries the editorial bite. Terracotta from Goop Warmth (A) carries the invitation. Tobacco anchors them together. Mustard appears rarely as a third moment of joy. Most range, most balanced.</div>
+        </div>
+        <div class="pillar-flag" style="color: var(--honey);">Pillar lean · balanced across all four</div>
+      </div>
+
+      <div class="swatch-strip six">
+        <div class="sw e-cream"><div class="role">Background</div><div><div class="name">Cream</div><div class="hex">#F4ECDF</div></div></div>
+        <div class="sw e-ink"><div class="role">Text · rare bg</div><div><div class="name">Ink</div><div class="hex">#1A1816</div></div></div>
+        <div class="sw e-cobalt"><div class="role">Feature · cool</div><div><div class="name">Cobalt</div><div class="hex">#1F3A8A</div></div></div>
+        <div class="sw e-terracotta"><div class="role">Feature · warm</div><div><div class="name">Terracotta</div><div class="hex">#C8623B</div></div></div>
+        <div class="sw e-tobacco"><div class="role">Anchor</div><div><div class="name">Tobacco</div><div class="hex">#6B4F3A</div></div></div>
+        <div class="sw e-mustard"><div class="role">Rare accent · 1 in 9</div><div><div class="name">Mustard</div><div class="hex">#D6A538</div></div></div>
+      </div>
+
+      <!-- First post row: cream / cobalt / terracotta atmospheric -->
+      <div class="post-row">
+        <div class="post e-cream">
+          <div class="cover-headline">She left the VP track at thirty-six. She called it a promotion.</div>
+          <div class="cover-name" style="color: var(--e-tobacco);">Maya, 38</div>
+        </div>
+        <div class="post e-cobalt">
+          <div class="quote">"My step back was the most strategic move I made all year."</div>
+          <div class="attr" style="opacity: 0.85;">— Naomi</div>
+        </div>
+        <div class="post atm e-terracotta" style="background-image: linear-gradient(rgba(200,98,59,0.55), rgba(200,98,59,0.55)), url('https://images.unsplash.com/photo-1502784444187-359ac186c5bb?w=800&q=80');"></div>
+      </div>
+
+      <!-- Second post row: showing range — cobalt cover / terracotta quote / cream pull-quote with mustard accent -->
+      <div class="post-row">
+        <div class="post e-cobalt">
+          <div class="cover-headline" style="color: var(--e-cream);">The identity crisis at year three.</div>
+          <div class="cover-name" style="color: var(--e-mustard);">Priya, 36</div>
+        </div>
+        <div class="post e-terracotta">
+          <div class="quote">"I stopped describing myself as ambitious. Then I had to ask why."</div>
+          <div class="attr" style="opacity: 0.85;">— Maya</div>
+        </div>
+        <div class="post e-mustard">
+          <div class="quote" style="color: var(--e-ink);">"The friendships that couldn't hold two versions of the same woman."</div>
+          <div class="attr" style="color: var(--e-tobacco);">— Naomi · featured</div>
+        </div>
+      </div>
+
+      <div class="tradeoff">
+        <strong>Where it wins:</strong> the cobalt-terracotta complementary pair is one of the most editorial colour combinations in modern publishing — La DoubleJ, vintage Vogue covers, the late-2010s wave of Brooklyn editorial brands all use it. Tobacco keeps the system from looking like a colour-block experiment. Mustard, used once every nine posts, gives the feed a third moment that isn't blue or orange.
+        <br><br>
+        <strong>How a 9-post feed reads:</strong> 3 cream-background covers · 1 cobalt pull-quote · 1 terracotta pull-quote · 2 B&amp;W portraits (inside Story Sets) · 1 atmospheric · 1 mustard featured moment. The eye moves across warm → cool → warm without anything fighting.
+        <br><br>
+        <strong>Risk:</strong> this is the richest direction; it needs the most editorial discipline. One feature colour per Story Set, picked at planning. Never two cobalts side by side. Never terracotta + mustard on the same post.
+        <br><br>
+        <strong>Pillar guardrail:</strong> ✓ Balanced. Cobalt → ambition/work register. Terracotta → domestic/unsaid register. Mustard → identity/becoming register. Tobacco neutralises across all four. No single subject's Story Set gets coded to one pillar — the colour rotates with the editorial calendar, not with the theme.
       </div>
     </div>
 
