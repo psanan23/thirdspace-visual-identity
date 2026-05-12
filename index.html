@@ -9,6 +9,100 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .belief-quote {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.4;
+    color: var(--ink);
+    max-width: 56ch;
+    margin-bottom: 18px;
+  }
+  .belief-quote + .belief-quote { margin-top: 0; }
+  .metaphor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+  @media (max-width: 800px) { .metaphor-grid { grid-template-columns: 1fr; } }
+  .metaphor-card {
+    background: var(--cream);
+    border: 1px solid var(--stone);
+    padding: 28px;
+    position: relative;
+  }
+  .metaphor-card .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--terracotta);
+    position: absolute;
+    top: 20px;
+    right: 24px;
+  }
+  .metaphor-card.third {
+    background: var(--terracotta);
+    color: var(--cream);
+    border: none;
+  }
+  .metaphor-card.third .num { color: var(--mustard); }
+  .metaphor-card h3 {
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--tobacco);
+  }
+  .metaphor-card.third h3 { color: var(--mustard); }
+  .metaphor-card p {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.35;
+    margin: 0;
+    margin-top: 12px;
+    max-width: none;
+  }
+
+  .check-list { list-style: none; padding-left: 0; margin-top: 24px; max-width: 76ch; }
+  .check-list li {
+    padding: 24px 0 24px 64px;
+    border-top: 1px solid var(--stone);
+    position: relative;
+  }
+  .check-list li:last-child { border-bottom: 1px solid var(--stone); }
+  .check-list li::before {
+    content: counter(check-counter, decimal-leading-zero);
+    counter-increment: check-counter;
+    position: absolute;
+    left: 0;
+    top: 28px;
+    font-family: 'Karla';
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--terracotta);
+    font-weight: 500;
+  }
+  .check-list { counter-reset: check-counter; }
+  .check-list .check-q {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .check-list .check-note {
+    font-size: 14px;
+    color: var(--tobacco);
+    line-height: 1.5;
+  }
+</style>
 </head>
 <body>
 
@@ -35,8 +129,8 @@
   <section class="hero" style="border-bottom: 1px solid var(--stone);">
     <div class="eyebrow">Third Space — @thirdspace.her</div>
     <h1>The visual identity, in one place.</h1>
-    <p class="lede">A working toolkit for the multi-dimensional mother in Southeast Asia. Use this before you make anything — a post, a caption, a deck, an AI prompt.</p>
-    <div class="meta">v2 · maintained alongside the brand brief · last updated automatically when this page is pushed</div>
+    <p class="lede">A working rulebook for @thirdspace.her. Open this before you make anything — a post, a caption, a deck, an AI prompt.</p>
+    <div class="meta">v2.1 · Goop Warmth palette · last updated when this page is pushed</div>
   </section>
 
   <section>
@@ -64,23 +158,95 @@
   </section>
 
   <section>
-    <span class="tag">Brand belief</span>
-    <h2>Modern women are not choosing between ambition, motherhood, identity, and desire. They are learning how to hold all of it.</h2>
-    <p class="section-intro">Every visual choice in this kit ladders up to that belief. Quiet, considered, honest. Editorial, not aspirational. Specific, not abstract.</p>
+    <span class="tag">Brand belief · in her voice</span>
+    <h2>What I keep coming back to.</h2>
 
-    <div class="grid-3" style="margin-top: 16px;">
+    <div class="belief-quote">
+      You see women holding all of it. The family. The work. The everything. But you never really hear them talk about the third version of themselves underneath — the one with her own ambition, taste, doubt, and want.
+    </div>
+    <div class="belief-quote">
+      I don't think we're choosing between those three. We're learning to hold all of them, edit what no longer fits, and build a life that's a bit more our own.
+    </div>
+    <div class="belief-quote" style="color: var(--terracotta); font-style: italic;">
+      There's no having it all. Trying to is the trap. Every woman I know is making hard trade-offs, just quietly. The job here is to say them out loud and stop pretending the impossible benchmark is real.
+    </div>
+
+    <p class="section-intro" style="margin-top: 32px;">Every visual choice in this kit ladders up to one of these:</p>
+
+    <div class="grid-2" style="margin-top: 16px;">
       <div class="card">
-        <h3>She is more than the roles she performs.</h3>
-        <p style="font-size: 14px; line-height: 1.6;">Never reduce her to mother, founder, or wife alone.</p>
+        <h3>A woman is more than the roles she's in.</h3>
+        <p style="font-size: 14px; line-height: 1.6;">Never reduce her to mum, founder, or wife alone. Visual cues never code to "this is a mum brand."</p>
       </div>
       <div class="card">
-        <h3>Ambition changes shape. It doesn't disappear.</h3>
-        <p style="font-size: 14px; line-height: 1.6;">Show the deliberateness behind any move, not just the move.</p>
+        <h3>Ambition doesn't disappear. It changes shape.</h3>
+        <p style="font-size: 14px; line-height: 1.6;">Show the deliberateness behind any move, not the move itself. Language is specific, not aspirational.</p>
       </div>
       <div class="card">
-        <h3>Style, work, money, relationships are one life.</h3>
-        <p style="font-size: 14px; line-height: 1.6;">The visual system treats them as one. No category badges, no lifestyle silos.</p>
+        <h3>Motherhood can grow who you are. It doesn't have to erase her.</h3>
+        <p style="font-size: 14px; line-height: 1.6;">Portraits never reduce her to the mother role — composition shows the room, the work, the trade-off, not the child.</p>
       </div>
+      <div class="card">
+        <h3>Work, family, money, friendships, what you actually want — all part of one life.</h3>
+        <p style="font-size: 14px; line-height: 1.6;">No category badges, no lifestyle silos, no pillar tags. The feed reads as one woman holding it all, not five separate verticals.</p>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top: 32px;">
+      <strong>Source:</strong> conversational brand belief in <code>NORTH-STAR.md</code>. The formal version is preserved in <code>SOURCE-OF-TRUTH.md</code>. If they ever conflict, North Star wins — it's Bon's voice. <strong>Pillar guardrail:</strong> three pillars stay broad (ambition · identity · motherhood). Never code to one — that's the explicit rule in the project CLAUDE.md.
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">What the name means</span>
+    <h2>Third Space says two things at once.</h2>
+    <p class="section-intro">The metaphor matters because it tells anyone working on this brand what they're trying to make space for. From <code>NORTH-STAR.md</code>.</p>
+
+    <div class="metaphor-grid">
+      <div class="metaphor-card">
+        <div class="num">01</div>
+        <h3>First space</h3>
+        <p>Family. The one that pulls hardest.</p>
+      </div>
+      <div class="metaphor-card">
+        <div class="num">02</div>
+        <h3>Second space</h3>
+        <p>Work. The one that defines you from the outside.</p>
+      </div>
+      <div class="metaphor-card third">
+        <div class="num">03</div>
+        <h3>Third space</h3>
+        <p>The one I keep losing. The part of me that isn't either.</p>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top: 28px;">
+      <strong>And:</strong> it says you don't have to choose. You're allowed your own identity, separate from being a mum or a worker. <em>Not at the expense of either. Alongside both.</em>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">When you're stuck</span>
+    <h2>Three checks before you publish.</h2>
+    <p class="section-intro">If a post fails any of these, kill it. From the "when I'm lost on what to make" section of <code>NORTH-STAR.md</code>.</p>
+
+    <ol class="check-list">
+      <li>
+        <div class="check-q">Does the story make her think "I thought I was the only one"?</div>
+        <div class="check-note">This is the floor. Recognition is the job. Without this, nothing else matters.</div>
+      </li>
+      <li>
+        <div class="check-q">Does it show one real choice this woman made?</div>
+        <div class="check-note">Not advice. A door she didn't know was there. Without this, it's a mirror with no window.</div>
+      </li>
+      <li>
+        <div class="check-q">Is the woman someone who didn't disappear into the roles?</div>
+        <div class="check-note">If she did, she's the wrong subject. The whole point is finding women who kept themselves.</div>
+      </li>
+    </ol>
+
+    <div class="note" style="margin-top: 28px;">
+      <strong>The negative tests, also:</strong> if it could appear on any working-mom platform, not Third Space. If you'd feature her just because her story is nice, not Third Space. If the post leaves the reader feeling she should be doing more, not Third Space.
     </div>
   </section>
 
@@ -93,7 +259,7 @@
       <div class="card">
         <span class="tag">Mandatory</span>
         <h3>Two fonts.</h3>
-        <p style="font-size: 13px;">Fraunces + Inter. Nothing else. <a href="pages/type.html" style="text-decoration: underline;">See type →</a></p>
+        <p style="font-size: 13px;">Fraunces + Karla. Nothing else. <a href="pages/type.html" style="text-decoration: underline;">See type →</a></p>
       </div>
       <div class="card">
         <span class="tag">Mandatory</span>
@@ -107,27 +273,48 @@
       </div>
       <div class="card">
         <span class="tag">Mandatory</span>
-        <h3>One feed pattern.</h3>
-        <p style="font-size: 13px;">Every 9 posts hit all 5 types. No two pull quotes side by side. <a href="pages/posts.html#feed" style="text-decoration: underline;">See feed →</a></p>
+        <h3>One imagery rule.</h3>
+        <p style="font-size: 13px;">Colour goes on type. B&amp;W goes on imagery. <a href="pages/photography.html" style="text-decoration: underline;">See photography →</a></p>
       </div>
     </div>
 
     <div class="note" style="margin-top: 40px;">
-      <strong>Decisions log:</strong> Every meaningful call this kit makes — fonts, photography treatment, wordmark direction, pillar signposting — is logged with reasoning at <a href="decisions/index.html" style="text-decoration: underline;">/decisions</a>. Don't undo a locked decision without writing a new entry that explains why.
+      <strong>Decisions log:</strong> every meaningful call this kit makes — fonts, photography treatment, wordmark direction, pillar signposting, palette — is logged with reasoning at <a href="decisions/index.html" style="text-decoration: underline;">/decisions</a>. Nine decisions locked in v2 (D01–D09). Don't undo a locked decision without writing a new entry that explains why.
     </div>
   </section>
 
   <section style="border-bottom: none;">
     <span class="tag">Source files</span>
     <h2>Linked, not copied.</h2>
-    <p class="section-intro">Anything you'd download (fonts, swatches, the brand brief PDF) lives on the <a href="pages/downloads.html" style="text-decoration: underline;">Downloads</a> page. Photos and finished posts live in your Drive, not here — this is the rulebook, not the asset library.</p>
+    <p class="section-intro">The kit references the canonical brand documents in the parent project folder. If a belief, audience definition, or pillar moves there, it gets reflected here.</p>
+
+    <div class="grid-2" style="gap: 16px;">
+      <div class="card">
+        <h3><code>NORTH-STAR.md</code></h3>
+        <p style="font-size: 13px;">Brand belief, Third Space metaphor, the pitch, and the three checks. Bon's voice. The "when I'm lost" doc.</p>
+      </div>
+      <div class="card">
+        <h3><code>SOURCE-OF-TRUTH.md</code></h3>
+        <p style="font-size: 13px;">Full brand brief: editorial vision, audience, 3 content jobs, 4 pillars, 90-day plan.</p>
+      </div>
+      <div class="card">
+        <h3><code>MANIFESTO.md</code></h3>
+        <p style="font-size: 13px;">Approved manifesto + opening prose v5. PDF goes to interview candidates.</p>
+      </div>
+      <div class="card">
+        <h3><code>TARGET-AUDIENCE.md</code></h3>
+        <p style="font-size: 13px;">Consumer-facing audience paragraph + dual-audience framing + tone guardrail.</p>
+      </div>
+    </div>
+
+    <p class="section-intro" style="margin-top: 28px; font-size: 13px;">Anything you'd download (fonts, swatches) lives on the <a href="pages/downloads.html" style="text-decoration: underline;">Downloads</a> page. Photos and finished posts live in your Drive, not here — this is the rulebook, not the asset library.</p>
   </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <div>Third Space — visual identity toolkit · v2</div>
+    <div>Third Space — visual identity toolkit · v2.1</div>
     <div>Source: <a href="https://github.com/psanan23/thirdspace-visual-identity" style="text-decoration: underline;">github.com/psanan23/thirdspace-visual-identity</a></div>
   </div>
 </footer>
